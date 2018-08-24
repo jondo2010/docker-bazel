@@ -5,7 +5,7 @@ RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8
   && curl https://bazel.build/bazel-release.pub.gpg | apt-key add -
 
 RUN apt-get update \
-  && apt-get install -y bazel \
+  && apt-get install -y bazel=0.16.1 \
   && rm -rf /var/lib/apt/lists/*
 
 # Set up workspace
